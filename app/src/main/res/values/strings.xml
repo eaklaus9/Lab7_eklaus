@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab1_eklaus</string>
+    <string name="class_name">CS60333</string>
+    <string name="activity_name">My activity</string>
+    <string name="Address">Notre Dame IN</string>
+    <string name="Sport_season">Basketball 2017</string>
+    <string name="Message">Sup</string>
+</resources>
