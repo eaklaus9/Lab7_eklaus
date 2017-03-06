@@ -112,4 +112,5 @@ public class DetailActivity extends AppCompatActivity {
         score.setText(teams.getGameScore());
 
     }
-}
+        }
+    }
