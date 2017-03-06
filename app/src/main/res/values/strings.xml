@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">Lab1_eklaus</string>
     <string name="class_name">CS60333</string>
-    <string name="activity_name">My activity</string>
+    <string name="activity_name">Schedule</string>
     <string name="Address">Notre Dame IN</string>
     <string name="Sport_season">Basketball 2017</string>
-    <string name="Message">Sup</string>
+    <string name="teamlogo">team logo</string>
+    <string name="teamname">team name</string>
+    <string name="date">date</string>
+    <string name="detail_time">Saturday, February 11, 6:00 PM</string>
+    <string name="detail_location">Purcell Pavilion at the Joyce Center, Notre Dame, IN</string>
+    <string name="detail_awayteamname">Florida State</string>
+    <string name="detail_awayteammascot">Seminoles</string>
+    <string name="detail_hometeamname">Notre Dame</string>
+    <string name="detail_hometeammascot">Fighting Irish</string>
+    <string name="detail_score">00 - 00</string>
+    <string name="detail_timeleft">Final</string>
+    <string name="detail_awayteamrecord">(21-5)</string>
+    <string name="detail_hometeamrecord">(19-7)</string>
+    <string name="camera">camera</string>
 </resources>

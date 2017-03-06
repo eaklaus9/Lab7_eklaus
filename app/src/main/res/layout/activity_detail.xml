@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_date_height"
+        android:id="@+id/location_time_layout"
+        android:layout_marginTop="@dimen/detail_date_top_margin"
+        android:layout_marginBottom="@dimen/detail_date_bottom_margin"
+        android:layout_marginStart="@dimen/detail_left_margin"
+        android:layout_marginEnd="@dimen/detail_right_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_time"
+            android:id="@+id/detail_time"
+            android:layout_weight="1"
+            android:textSize="@dimen/detail_date_textsize"
+            android:textColor="@color/colortextlight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/detail_location"
+            android:id="@+id/detail_location"
+            android:textSize="@dimen/detail_date_textsize"
+            android:textColor="@color/colortextlight"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_score_height"
+        android:id="@+id/detail_game"
+        android:layout_below="@+id/location_time_layout"
+        android:layout_alignParentStart="true"
+        android:baselineAligned="false">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/floridastate"
+                android:id="@+id/away_team_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_awayteamname"
+                android:layout_toEndOf="@id/away_team_logo"
+                android:layout_alignParentTop="true"
+                android:id="@+id/away_team_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_awayteammascot"
+                android:textSize="@dimen/detail_mascot_textsize"
+                android:textColor="@color/colortextdark"
+                android:layout_toEndOf="@id/away_team_logo"
+                android:layout_below="@id/away_team_name"
+                android:id="@+id/away_team_mascot"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_awayteamrecord"
+                android:textSize="@dimen/detail_date_textsize"
+                android:textColor="@color/colortextlight"
+                android:layout_toEndOf="@id/away_team_logo"
+                android:layout_below="@id/away_team_mascot"
+                android:id="@+id/away_record"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/detail_score_margin"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/detail_mascot_textsize"
+                android:layout_gravity="center"
+                android:id="@+id/score"
+                android:textColor="@color/colortextdark"
+                android:text="@string/detail_score" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/detail_date_textsize"
+                android:layout_gravity="center"
+                android:id="@+id/timeleft"
+                android:textColor="@color/colortextlight"
+                android:text="@string/detail_timeleft"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/nd"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/home_team_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_hometeamname"
+                android:layout_toStartOf="@id/home_team_logo"
+                android:layout_alignParentTop="true"
+                android:id="@+id/home_team_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_hometeammascot"
+                android:textSize="@dimen/detail_mascot_textsize"
+                android:textColor="@color/colortextdark"
+                android:layout_toStartOf="@id/home_team_logo"
+                android:layout_below="@id/home_team_name"
+                android:id="@+id/home_team_mascot"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_hometeamrecord"
+                android:textSize="@dimen/detail_date_textsize"
+                android:textColor="@color/colortextlight"
+                android:layout_toStartOf="@id/home_team_logo"
+                android:layout_below="@id/home_team_mascot"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="@dimen/camera_width"
+        android:layout_height="@dimen/camera_height"
+        android:text="@string/camera"
+        android:layout_marginTop="@dimen/detail_date_top_margin"
+        android:layout_marginBottom="@dimen/detail_date_bottom_margin"
+        android:layout_marginStart="@dimen/detail_left_margin"
+        android:layout_marginEnd="@dimen/detail_right_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button_camera"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/camera_picture"
+        android:layout_alignTop="@+id/button_camera"
+        android:layout_alignStart="@+id/location_time_layout" />
+</RelativeLayout>

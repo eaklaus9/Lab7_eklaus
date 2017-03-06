@@ -1,0 +1,10 @@
+@mipmap/floridastate, Florida State, Feb 11, Saturday, February 11, 6:00 PM, Purcell Pavilion at the Joyce Center, Notre Dame, IN, Seminoles, (21-5), 72-84, Final
+@mipmap/bc, Boston College, Feb 14, Tuesday, February 14, 7:00 PM, Silvio O. Conte Forum, Chestnut Hill, Massachusetts, Golden Eagles, (9-18), 76-84, Final
+@mipmap/ncstate, North Carolina State, Feb 18, Saturday, February 18, 12:00 PM, NC Arena, Raleigh, North Carolina, Wolf Pack, (14-14), 72-81, Final
+@mipmap/georgiatech, Georgia Tech, Feb 26, Sunday, February 26, 6:30 PM, Purcell Pavilion at the Joyce Center, Notre Dame, IN, Yellow Jackets, (16-13), 60-64, Final
+@mipmap/bc, Boston College, March 1, Tuesday, February 14, 7:00 PM, Silvio O. Conte Forum, Chestnut Hill, Massachusetts, Golden Eagles, (9-21), 66-82, Final
+@mipmap/acc, ACC Tournament, March 7, TBD, TBD, TBD, --, --, --
+@mipmap/basketball, NCAA Tournament, March 16, TBD, TBD, TBD, --, --, --
+
+
+

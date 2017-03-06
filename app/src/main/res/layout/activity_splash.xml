@@ -25,18 +25,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Sport_season"
-        android:textSize="20dp"
+        android:textSize="@dimen/splash_text_fontsize"
         android:textColor="@color/colorAccent"
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="@dimen/splash_text_top_margin"/>
 
     <ImageView
-        android:layout_width="240dp"
+        android:layout_width="@dimen/splash_image_width"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/leprechaun"
         android:id="@+id/imageView"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="@dimen/splash_image_bottom_margin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
