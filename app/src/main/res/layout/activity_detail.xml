@@ -20,8 +20,7 @@
             android:text="@string/detail_time"
             android:id="@+id/detail_time"
             android:layout_weight="1"
-            android:textSize="@dimen/detail_date_textsize"
-            android:textColor="@color/colortextlight"/>
+            android:textSize="@dimen/detail_date_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,8 +28,7 @@
             android:layout_weight="1"
             android:text="@string/detail_location"
             android:id="@+id/detail_location"
-            android:textSize="@dimen/detail_date_textsize"
-            android:textColor="@color/colortextlight"/>
+            android:textSize="@dimen/detail_date_textsize" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/detail_awayteammascot"
                 android:textSize="@dimen/detail_mascot_textsize"
-                android:textColor="@color/colortextdark"
                 android:layout_toEndOf="@id/away_team_logo"
                 android:layout_below="@id/away_team_name"
                 android:id="@+id/away_team_mascot"/>
@@ -73,7 +70,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/detail_awayteamrecord"
                 android:textSize="@dimen/detail_date_textsize"
-                android:textColor="@color/colortextlight"
                 android:layout_toEndOf="@id/away_team_logo"
                 android:layout_below="@id/away_team_mascot"
                 android:id="@+id/away_record"/>
@@ -91,7 +87,6 @@
                 android:textSize="@dimen/detail_mascot_textsize"
                 android:layout_gravity="center"
                 android:id="@+id/score"
-                android:textColor="@color/colortextdark"
                 android:text="@string/detail_score" />
             <TextView
                 android:layout_width="wrap_content"
@@ -99,7 +94,6 @@
                 android:textSize="@dimen/detail_date_textsize"
                 android:layout_gravity="center"
                 android:id="@+id/timeleft"
-                android:textColor="@color/colortextlight"
                 android:text="@string/detail_timeleft"/>
         </LinearLayout>
 
@@ -126,7 +120,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/detail_hometeammascot"
                 android:textSize="@dimen/detail_mascot_textsize"
-                android:textColor="@color/colortextdark"
                 android:layout_toStartOf="@id/home_team_logo"
                 android:layout_below="@id/home_team_name"
                 android:id="@+id/home_team_mascot"/>
@@ -135,7 +128,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/detail_hometeamrecord"
                 android:textSize="@dimen/detail_date_textsize"
-                android:textColor="@color/colortextlight"
                 android:layout_toStartOf="@id/home_team_logo"
                 android:layout_below="@id/home_team_mascot"/>
 
@@ -159,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/camera_picture"
+        android:id="@+id/photo_taken"
         android:layout_alignTop="@+id/button_camera"
         android:layout_alignStart="@+id/location_time_layout" />
 </RelativeLayout>

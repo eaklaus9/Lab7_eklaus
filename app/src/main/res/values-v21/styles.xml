@@ -1,0 +1,11 @@
+<resources>
+    <style name="MyMaterialTheme" parent="SuperMaterialTheme">
+
+        <item name="android:colorPrimary">@color/colorPrimaryMaterial</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDarkMaterial</item>
+        <item name="android:colorAccent">@color/colorAccentMaterial</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryMaterial</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryMaterial</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+</resources>

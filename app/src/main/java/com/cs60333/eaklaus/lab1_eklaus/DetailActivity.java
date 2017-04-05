@@ -28,8 +28,37 @@ import java.util.Date;
  */
 
 public class DetailActivity extends AppCompatActivity {
-    @Override
+    public static int CAMERA_REQUEST = 1888;
 
+    private String getPictureName() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String timestamp = sdf.format(new Date());
+        return "BestMoments" + timestamp + ".jpg";
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            if (requestCode == CAMERA_REQUEST) {
+                Intent photoGalleryIntent = new Intent(Intent.ACTION_PICK);
+                File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+                String pictureDirectoryPath = pictureDirectory.getPath();
+                Uri imageUri = Uri.parse(pictureDirectoryPath);
+                InputStream inputStream;
+                try {
+                    inputStream = getContentResolver().openInputStream(imageUri);
+
+                    Bitmap image = BitmapFactory.decodeStream(inputStream);
+                    ImageView imgView = (ImageView) findViewById(R.id.photo_taken);
+                    imgView.setImageBitmap(image);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    @Override
     public void onCreate(Bundle bundle) {
 
         super.onCreate(bundle);
@@ -37,46 +66,19 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Button camera = (Button) findViewById(R.id.button_camera);
-        camera.setOnClickListener(new Button.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
+        camera.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 File PictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
                 String pictureName = getPictureName();
                 File imageFile = new File(PictureDirectory, pictureName);
                 Uri pictureUri = Uri.fromFile(imageFile);
-                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, );
-                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                //Ask about this line
+                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, pictureUri);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);}
 
-            private String getPictureName() {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-                String timestamp = sdf.format(new Date());
-                return "BestMoments" + timestamp + ".jpg";
-            }
-
-            protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-                if(resultCode == RESULT_OK) {
-                    if (requestCode == CAMERA_REQUEST) {
-                        Intent photoGalleryIntent = new Intent(Intent.ACTION_PICK);
-                        File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-
-                        String pictureDirectoryPath = pictureDirectory.getPath();
-                        Uri imageUri = Uri.parse(pictureDirectoryPath);
-                        InputStream inputStream;
-                        try {
-                            inputStream = getContentResolver().openInputStream(imageUri);
-
-                            Bitmap image = BitmapFactory.decodeStream(inputStream);
-                            ImageView imgView = (ImageView) findViewById(R.id.photo_taken);
-                            imgView.setImageBitmap(image);
-
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-                        }
-            }
         });
+
 
         // Unbundle the team object from MainActivity
 
@@ -113,4 +115,4 @@ public class DetailActivity extends AppCompatActivity {
 
     }
         }
-    }
+
