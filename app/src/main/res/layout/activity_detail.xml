@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <include layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -154,4 +159,5 @@
         android:id="@+id/photo_taken"
         android:layout_alignTop="@+id/button_camera"
         android:layout_alignStart="@+id/location_time_layout" />
-</RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

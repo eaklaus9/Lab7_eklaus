@@ -9,13 +9,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -60,9 +60,7 @@ public class DetailActivity extends AppCompatActivity {
     }
     @Override
     public void onCreate(Bundle bundle) {
-
         super.onCreate(bundle);
-
         setContentView(R.layout.activity_detail);
 
         Button camera = (Button) findViewById(R.id.button_camera);
