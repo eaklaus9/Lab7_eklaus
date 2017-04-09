@@ -1,5 +1,6 @@
 package com.cs60333.eaklaus.lab1_eklaus;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +19,8 @@ import android.support.design.widget.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,36 @@ public class MainActivity extends AppCompatActivity {
         myToolbar.setTitle("ND Athletics");
         setSupportActionBar(myToolbar);
 
+        dbHelper = new DBHelper(this.getApplicationContext());
+        dbHelper.onUpgrade(dbHelper.getWritableDatabase(), 1, 2);
+
         ArrayList<String[]> games = new MyCsvFileReader(this).readCsvFile(R.raw.schedule);
+
+        for (int i = 0; i < games.size(); i++) {
+            String[] game = games.get(i);
+
+            String teamlogo = String.valueOf(game[0]);
+            ContentValues contentValueslogo = new ContentValues();
+            contentValueslogo.put(dbHelper.COL_LOGO, teamlogo);
+            dbHelper.insertData("Teams", contentValueslogo);
+
+            String teamname = String.valueOf(game[1]);
+            ContentValues contentValuesname = new ContentValues();
+            contentValuesname.put(dbHelper.COL_NAME, teamname);
+            dbHelper.insertData("Teams", contentValuesname);
+
+            String teammascot = String.valueOf(game[5]);
+            ContentValues contentValuesmascot = new ContentValues();
+            contentValuesmascot.put(dbHelper.COL_MASCOT, teammascot);
+            dbHelper.insertData("Teams", contentValuesmascot);
+
+            String teamrecord = String.valueOf(game[7]);
+            ContentValues contentValuesrecord = new ContentValues();
+            contentValuesrecord.put(dbHelper.COL_RECORD, teamrecord);
+            dbHelper.insertData("Teams", contentValuesrecord);
+
+        }
+
         final ArrayList<Team> teams = new ArrayList<>();
 
 
